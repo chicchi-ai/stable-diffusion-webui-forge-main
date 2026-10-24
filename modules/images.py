@@ -14,7 +14,10 @@ import piexif
 import piexif.helper
 from PIL import Image, ImageFont, ImageDraw, ImageColor, PngImagePlugin, ImageOps
 # pillow_avif needs to be imported somewhere in code for it to work
-import pillow_avif # noqa: F401
+try:
+    import pillow_avif # noqa: F401
+except ImportError:
+    pass
 import string
 import json
 import hashlib
